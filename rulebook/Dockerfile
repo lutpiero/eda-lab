@@ -13,7 +13,7 @@ RUN apt-get install -y curl
 RUN pip3 install "ansible<2.11"
 RUN pip3 install jinja2==3.0.3 --force-reinstall
 RUN pip3 install Flask --upgrade
-RUN pip3 install pyyaml==5.4.1
+RUN pip3 install pyyaml==5.3.1
 RUN pip3 install packaging==21.0
 RUN pip3 install resolvelib==0.8.1
 
