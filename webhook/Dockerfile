@@ -1,5 +1,7 @@
 # Base image
 FROM ghcr.io/viyancs/eda-rulebook:latest
+RUN mkdir /.ansible
+RUN chmod -R 777 /.ansible
 WORKDIR /app
 COPY . .
 # extend Install Ansible Rulebook & galaxy
