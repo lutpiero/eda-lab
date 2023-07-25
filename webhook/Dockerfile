@@ -2,6 +2,7 @@
 FROM ghcr.io/viyancs/eda-rulebook:latest
 WORKDIR /app
 COPY . .
+RUN ansible-galaxy collection install ansible.eda
 RUN ls -lah
 EXPOSE 5000
 

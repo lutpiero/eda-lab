@@ -33,7 +33,7 @@ RUN pip3 install ansible ansible-rulebook ansible-runner
 WORKDIR /app
 
 # Copy your application files to the container
-# COPY . .
+COPY . .
 
 # Run your application
 #CMD [ "python3", "app.py" ]
