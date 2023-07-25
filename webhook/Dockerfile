@@ -1,5 +1,5 @@
 # Base image
-FROM viyancs/ansible-rulebook:latest
+FROM ghcr.io/viyancs/eda-rulebook:latest
 WORKDIR /app
 COPY . .
 RUN ls -lah
