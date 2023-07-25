@@ -2,7 +2,11 @@
 FROM ghcr.io/viyancs/eda-rulebook:latest
 WORKDIR /app
 COPY . .
+# extend Install Ansible Rulebook & galaxy
+RUN ansible-galaxy collection install ansible.posix
+RUN ansible-galaxy collection install community.general
 RUN ansible-galaxy collection install ansible.eda
+RUN pip3 install ansible ansible-rulebook ansible-runner
 RUN ls -lah
 EXPOSE 5000
 
