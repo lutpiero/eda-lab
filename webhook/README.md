@@ -12,3 +12,11 @@ how to run
  <pre>
  curl -H 'Content-Type: application/json' -d "{\"message\": \"Ansible is super cool\"}" 127.0.0.1:5000/endpoint
  </pre>
+
+
+How to build
+======
+```
+git tag vx.x.x main
+git push origin vx.x.x
+```
