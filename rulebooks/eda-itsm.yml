@@ -12,7 +12,7 @@
   ## Define the conditions we are looking for
 
   rules:
-    - name: Say Hello
+    - name: ITSM Rules
       condition: event.payload.message == "Event Triggered"
 
   ## Define the action we should take should the condition be met
