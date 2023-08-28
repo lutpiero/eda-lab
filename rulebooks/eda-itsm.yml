@@ -1,0 +1,25 @@
+---
+- name: Listen for incoming events 
+  hosts: all
+
+  ## Define our source for events
+
+  sources:
+    - ansible.eda.webhook:
+        host: 0.0.0.0
+        port: 5001
+
+  ## Define the conditions we are looking for
+
+  rules:
+    - name: Say Hello
+      condition: event.payload.message == "Event Triggered"
+
+  ## Define the action we should take should the condition be met
+
+      action:
+        run_job_template:
+          name: JIRA Create Ticket
+          job_args:
+            application_name: "googler {{ event.meta.hosts }}"
+          organization: IMAPAC
