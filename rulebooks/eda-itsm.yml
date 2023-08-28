@@ -21,5 +21,6 @@
         run_job_template:
           name: JIRA Create Ticket
           job_args:
-            application_name: "{{ event.payload.app_name }}"
+            extra_vars: 
+              application_name: "{{ event.payload.application_name }}"
           organization: IMAPAC
