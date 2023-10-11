@@ -24,3 +24,13 @@
             extra_vars: 
               application_name: "{{ event.payload.application_name }}"
           organization: IMAPAC
+
+    - name: ITSM Request VM
+      condition: event.payload.message == "Request VM"
+      action:
+        run_job_template:
+          name: JIRA Create Request VM
+          job_args:
+            extra_vars: 
+              vm_specification: "{{ event.payload.vm_specification }}"
+          organization: IMAPAC
